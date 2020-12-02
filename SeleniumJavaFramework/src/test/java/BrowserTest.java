@@ -1,0 +1,16 @@
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class BrowserTest {
+	
+	public static void main(String[] args)
+	{
+
+    String projectPath=System.getProperty("user.dir");
+    System.out.println("project path is "+projectPath);
+    System.setProperty("webdriver.chrome.driver",projectPath+"\\drivers\\chromedriver\\chromedriver.exe");
+	WebDriver driver=new ChromeDriver();
+	driver.manage().window().maximize();
+	driver.get("https://www.seleniumhq.org/");
+   }
+}
